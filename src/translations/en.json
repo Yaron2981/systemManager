@@ -1,0 +1,10 @@
+{
+    "app.hello": "hello",
+
+    "header.system_manager":"System Manager",
+    "header.light_mode":"Light mode",
+    "header.dark_mode":"Dark mode",
+    "header.language":"Language",
+    "header.display_status":"Display status"
+
+}

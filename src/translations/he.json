@@ -1,0 +1,11 @@
+{
+    "app.hello": "שלום",
+
+
+    "header.system_manager":"מנהל מערכת",
+    "header.light_mode":"עיצוב בהיר",
+    "header.dark_mode":"עיצוב כהה",
+    "header.language":"שפה",
+    "header.display_status":"מצב תצוגה"
+
+}
