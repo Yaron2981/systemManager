@@ -3,6 +3,8 @@ import { Box } from "@mui/material";
 import Button from "@mui/material/Button";
 import { FormattedMessage } from "react-intl";
 import translate from "../../translate";
+import { Counter } from "../../features/counter/Counter";
+import { Quotes } from "../../features/quotes/Quotes";
 
 export default function Homepage() {
   return (
@@ -20,13 +22,8 @@ export default function Homepage() {
       <div>
         <FormattedMessage id="app.hello" defaultMessage="Hello" />
       </div>
-      <Button
-        style={{ marginTop: "1rem" }}
-        variant="contained"
-        endIcon={<CloudIcon />}
-      >
-        Think, Mark. Think!
-      </Button>
+  <Counter/>
+  <Quotes/>
     </Box>
   );
 }
