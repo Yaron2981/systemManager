@@ -14,6 +14,7 @@ import {
   import {IntlProvider} from "react-intl";
   import translate, { changeLanguage, messages } from "./translate";
   import {getDesignTokens} from './theme';
+import { BehaviorSubject } from "rxjs";
   /**
     TypeScript and React inconvenience:
     These functions are in here purely for types! 
@@ -22,8 +23,9 @@ import {
     Providing a type that could be 'null | something' 
     and initiating it with *null* would be uncomfortable :)
   */
-  export const MUIWrapperContext = createContext({
+  export const MUIWrapperContext = createContext<any>({
     toggleColorMode: () => {},
+    getDirection:()=>{},
     changeDirection: (dir: Direction) => {},
   });
   
@@ -36,7 +38,7 @@ import {
   const emptyCache = createCache({
     key: "meaningless-key",
   });
-  
+  export const direction$ = new BehaviorSubject<string>("ltr");
   export default function MUIWrapper({
     children,
   }: {
@@ -45,13 +47,17 @@ import {
     const [mode, setMode] = useState<PaletteMode>("dark");
     const [direction, setDirection] = useState<Direction>("ltr");
     const [lang, setLang] = useState("en");
-
+    
     const muiWrapperUtils = useMemo(
       () => ({
         toggleColorMode: () => {
           setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
         },
+        getDirection: ()=>{
+          return direction;
+        },
         changeDirection: (dir: Direction) => {
+          direction$.next(dir);
           setDirection(dir);
           setLang(dir === 'ltr' ? "en" : "he");
         },

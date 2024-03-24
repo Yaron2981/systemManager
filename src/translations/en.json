@@ -1,5 +1,9 @@
 {
     "app.hello": "hello",
+    
+    "layout.title1":"Title 1",
+    "layout.title2":"Title 2",
+    "layout.title3":"Title 3",
 
     "header.system_manager":"System Manager",
     "header.light_mode":"Light mode",

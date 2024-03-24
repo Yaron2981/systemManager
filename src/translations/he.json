@@ -1,6 +1,9 @@
 {
     "app.hello": "שלום",
-
+        
+    "layout.title1":"כותרת 1",
+    "layout.title2":"כותרת 2",
+    "layout.title3":"כותרת 3",
 
     "header.system_manager":"מנהל מערכת",
     "header.light_mode":"עיצוב בהיר",
