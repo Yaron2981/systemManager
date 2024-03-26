@@ -1,5 +1,15 @@
 body {
-    margin: 0;
-    overflow: hidden;
-    height: 100vh;
-  }
+  margin: 0;
+  /* overflow: hidden; */
+  height: calc(100vh - 64px); 
+}
+
+.react-grid-layout {
+  direction: ltr !important;
+}
+[dir=rtl] .layout-grid {
+  direction: rtl !important;
+}
+.react-resizable-handle{
+  opacity: 0;
+}

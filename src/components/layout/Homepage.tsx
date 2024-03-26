@@ -13,11 +13,14 @@ export default function Homepage() {
       sx={{
         bgcolor: "background.default",
         height:"calc(100vh - 64px)",
-        overflow:'hidden'
+        mt:'64px',
+        maxHeight:document.body.clientHeight+'px',
+        //overflow:'hidden',
+        m:0
+
       }}
     >
       <div>
-        <FormattedMessage id="app.hello" defaultMessage="Hello" />
         <LayoutGrids/>
       </div>
 
